@@ -41,10 +41,45 @@ namespace Fall2022_Classes
             Speed = speed;
             IsPaidFor = isPaidFor;
         }
+        public Car(string make, string model, string color, int year)
+        {
+            Make = make;
+            Model = model;
+            Color = color;
+            Year = year;
+            
+        }
 
         // Methods
 
+        // accessModifier returnType name ()
+        // {
+        //  code to run
+        // }
 
-
+        //non-Static Method
+        public void Accelerate() 
+        {
+            Speed += 5;
+        }
+        // over loading method
+        public void Accelerate(int speed)
+        {
+            Speed += speed;
+        }
+        //static method -> function
+        public static void Honk()
+        {
+            Console.WriteLine("Honk!");
+        }
+        // having a return statement for a method
+        public float TimeToTravelDistance(int distance)
+        {
+            if (Speed == 0)
+            {
+                return 0;
+            }
+            return distance / (float)Speed; // interger division
+        }
     }
 }
